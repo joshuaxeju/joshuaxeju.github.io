@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hover.css">
+    <title>ONCE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/fontawesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.0.0/jquery.magnific-popup.js"></script>
+
+
+</head>
+<body>
+   
+    <section class="showcase ">
+        <div id ="loader"></div>
+        <header>
+            <h2 class="logo">TWICE</h2>
+            <div class="flip-box">
+                <div class="flip-box-inner">
+                  <div class="flip-box-front">
+                    <img src="twice-k-pop-logo-png-favpng-gLs9gQMYr7gXLMbwwySzu73mR-removebg-preview.png" alt="Paris" style="width:150px;height:150px">
+                  </div>
+                  <div class="flip-box-back">
+                    <img src="twice-k-pop-logo-png-favpng-gLs9gQMYr7gXLMbwwySzu73mR-removebg-preview.png" alt="Paris" style="width:150px;height:150px">
+                    </div>
+                </div>
+                </div>
+            <div class="toggle "></div>
+        </header>
+        <video src="y2mate.is - TWICE I CAN'T STOP ME MV-CM4CkVFmTds-1080p-1620233185005.mp4" muted loop autoplay></video>
+ 
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>I CAN'T STOP ME</h2>
+            <h3>TWICE</h3>
+            <p>Eyes Wide Open</p>
+       
+       <a href="#videostory" class="text"
+       id="videolink">
+   Play Video <i class="fa fa-play-cirle" aria-hidden="true"> &nbsp;</i>
+</a>
+<div id ="videostory" class="mfp-hide"
+style="max-width: 80%; margin: 0 auto;">
+<div class="iframe-container">
+<iframe width="1090" height="600" src="https://www.youtube.com/embed/CM4CkVFmTds" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+</div>
+        <ul class="social">
+            <li><a href="https://web.facebook.com/JYPETWICE" target="_blank""><img src="sns_facebook_b.png" alt=""></a></li>
+            <li><a href="https://twitter.com/JYPETWICE" target="_blank""><img src="sns_twitter_b.png" alt=""></a></li>
+            <li><a href="https://instagram.com/twicetagram" target="_blank""><img src="sns_instagram_b.png" alt=""></a></li>
+            <li><a href="https://www.youtube.com/c/twice" target="_blank""><img src="sns_youtube_b.png" alt=""></a></li>
+
+        </ul>
+    </section>
+
+    <div class="menu">
+    <ul>
+        <li><a href="http://localhost:3000/videobackground/index.html">Home</a></li>
+        <li><a href="http://localhost:3000/videobackground/Playlist2/play2.html">Playlist</a></li>
+        <li><a href="http://localhost:3000/userregistration/login.php">Fansclub</a></li>
+        <li><a href="#">Members</a></li>
+        <li><a href="#">Album</a></li>
+
+    </ul>
+    </div>
+    <script src="hi.js"></script>
+    <script>
+         const menuToggle= document.querySelector('.toggle')
+         const showcase= document.querySelector('.showcase')
+
+         menuToggle.addEventListener('click', () => {
+             menuToggle.classList.toggle('active')
+             showcase.classList.toggle('active')
+         })
+    </script>
+    <script>
+        var loader;
+function loadNow(opacity) {
+    if(opacity <= 0) {
+        displayContent();
+    }
+    else{
+        loader.style.opacity = opacity;
+        window.setTimeout(function(){
+            loadNow(opacity - 0.10)
+        }, 100);
+    }
+}
+function displayContent() {
+    loader.style.display = 'none';
+    document.getElementById('content').style.display = 'block';
+}
+
+
+document.addEventListener("DOMContentLoaded", function(){
+    loader = document.getElementById('loader');
+    loadNow(3);
+});
+</script>
+</body>
+</html>
